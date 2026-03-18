@@ -1,0 +1,34 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "weather-mcp-server"
+version = "0.1.0"
+description = "MCP Server for global weather, forecasts, air quality and climate data via Open-Meteo"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [{name = "AiAgentKarl"}]
+keywords = ["mcp", "weather", "climate", "forecast", "open-meteo", "air-quality"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Atmospheric Science",
+]
+dependencies = [
+    "mcp>=1.0.0",
+    "httpx>=0.27.0",
+    "python-dotenv>=1.0.0",
+    "pydantic>=2.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/AiAgentKarl/weather-mcp-server"
+Repository = "https://github.com/AiAgentKarl/weather-mcp-server"
+Issues = "https://github.com/AiAgentKarl/weather-mcp-server/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
