@@ -30,5 +30,8 @@ Homepage = "https://github.com/AiAgentKarl/weather-mcp-server"
 Repository = "https://github.com/AiAgentKarl/weather-mcp-server"
 Issues = "https://github.com/AiAgentKarl/weather-mcp-server/issues"
 
+[project.scripts]
+weather-server = "src.server:main"
+
 [tool.hatch.build.targets.wheel]
 packages = ["src"]
